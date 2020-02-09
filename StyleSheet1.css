@@ -1,0 +1,204 @@
+﻿/*body portion*/
+body {
+    margin: 0px;
+    background-image: url(media/background_image.jpg);
+    background-size: cover;
+    background-attachment:fixed;
+}
+
+/*header portion*/
+
+header{
+    height:65vh;
+    opacity:1;
+    background-image:url(media/header_image.jpg);
+    background-size:cover;
+    background-position:top;
+    background-attachment:fixed;
+}
+.horizontal_list{
+    list-style:none;
+    padding-left:0px;
+    margin:0px;
+}
+.horizontal_list li{
+    display:inline-block;
+    margin:12px 50px 0px 0px;
+}
+.horizontal_list li a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    font-size:20px;
+    font-family:inherit;
+    transition:color 0.1s, font-size 0.1s;
+    text-shadow:0px 0px 2px white;
+}
+.horizontal_list li a:hover{
+    color:antiquewhite;
+    text-decoration:double;
+    font-size:23px;
+}
+.text_center{
+    text-align:center;
+}
+.my_name{
+    color:white;
+    font-size:7rem;
+    font-weight:700;
+    letter-spacing:0.1rem;
+    margin-top:1rem;
+    margin-bottom:0.5rem;
+    font-family:cursive;
+    opacity:1;
+    text-shadow:0px 0px 7px white;
+}
+.profile_links li{
+    display:inline-block;
+}
+.profile_links li a img{
+    margin:25px 50px 25px 50px;
+    transition: width 0.1s, height 0.1s;
+    border-radius:50%;
+}
+.profile_links li a img:hover{
+    width:53px;
+    height:53px;
+    box-shadow:0px 0px 12px 2px white;
+}
+
+/*main portion*/
+#about{
+    height:auto;
+    position:relative;
+}
+#my_image{
+    height:12rem;
+    width:12rem;
+    margin:0px 40% 0% 40%;
+    margin-top:-18vh;
+}
+#my_image img{
+    border-style:solid;
+    border-width:15px;
+    border-color:white;
+    border-radius:50%;
+    margin:auto;
+    box-shadow:0px 0px 20px 7px black;
+}
+.about_me {
+    font-size: 25px;
+    margin: 8% 7% 4% 7%;
+    font-family: cursive;
+    text-align: center;
+    padding: 25px;
+    letter-spacing: -1px;
+    background-color: rgba(256, 256, 256, 0.9);
+    border-color:white;
+    box-shadow:0px 0px 12px 1px black;
+    border-radius:10%;
+    color:darkslategrey;
+    overflow-wrap:break-word;
+    
+}
+
+/*for skills*/
+
+section{
+    
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.section_heading{
+    width:auto;
+    padding:20px 10px 10px;
+    font-weight:400;
+}
+.section_heading span{
+    font-size:40px;
+    color:#2857a4;
+    display:inline-block;
+    margin-right:0.5rem;
+    font-weight:900;
+}
+#skills {
+    background-color: rgba(256, 256, 256, 0.9);
+    border-color: white;
+    box-shadow: 0px 0px 4px 0px lightgrey;
+    border-radius: 10%;
+    margin: 0% 7% 4% 7%;
+    padding-bottom: 13px;
+}
+.skills_display{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    justify-content:center;
+}
+.skill_progress{
+    background-color:dimgrey;
+    border-radius:30px;
+    height:3rem;
+    width:13rem;
+    margin:12px 30px 30px 30px;
+    box-shadow:0px 0px 26px 1px lightgrey;
+}
+/*c++*/
+.eighty_five_percent {
+    background-color: #4285F4;
+    border-radius: 30px 0px 0px 30px;
+    height: 3rem;
+    width: 11.05rem; /*(13*0.85) percent*/
+    position: absolute;
+}
+.eighty_five_percent h1{
+    margin-left: 14%;
+    margin-top: 12px;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+/*PYTHON*/
+.seventy_five_percent {
+    background-color: #DB4437;
+    border-radius: 30px 0px 0px 30px;
+    height: 3rem;
+    width: 9.75rem; /*(13*0.75) percent*/
+    position: absolute;
+}
+.seventy_five_percent h1{
+    margin-left: 14%;
+    margin-top: 12px;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+/*machine learning*/
+.eighty_percent {
+    background-color: #F4B400;
+    border-radius: 30px 0px 0px 30px;
+    height: 3rem;
+    width: 10.40rem; /*(13*0.80) percent*/
+    position: absolute;
+}
+.eighty_percent h1{
+    margin-left: 10%;
+    margin-top: 16px;
+    font-weight: 700;
+    font-family: sans-serif;
+    font-size:17px;
+}
+/*web development*/
+.ninty_percent {
+    background-color: #0F9D58;
+    border-radius: 30px 0px 0px 30px;
+    height: 3rem;
+    width: 11.7rem; /*(13*0.90) percent*/
+    position: absolute;
+}
+.ninty_percent h1{
+    margin-left: 14%;
+    margin-top: 12px;
+    font-weight: 700;
+    font-family: sans-serif;
+}
