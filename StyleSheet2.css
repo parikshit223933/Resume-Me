@@ -51,11 +51,15 @@ body
     font-weight:900;
     margin-bottom:0.5rem;
 }
-#social-icons li a img
+.social-icons li a img
 {
     height:50px;
     width:50px;
     margin:0px 15px 0px 15px;
-    border-radius: 50px;
-    
+    border-radius: 50%;
+    transition: box-shadow 0.25s;
+}
+.social-icons li a img:hover
+{
+    box-shadow:0px 0px 24px 5px white;
 }
