@@ -1,0 +1,10 @@
+body
+{
+    margin:0px;
+}/* to remove all the resedual margins */
+#body-header
+{
+    background-image: url("media/IMG_20200420_185804.jpg");
+    height:65vh;
+    
+}
