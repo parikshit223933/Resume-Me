@@ -4,7 +4,58 @@ body
 }/* to remove all the resedual margins */
 #body-header
 {
-    background-image: url("media/IMG_20200420_185804.jpg");
+    background-image: url("media/cover3.jpg");
     height:65vh;
+    background-size:cover;
+    background-position:top;
+    background-attachment: fixed;
+}
+.horizontal-list
+{
+    list-style:none;
+    padding-left:0px;
+    margin:0px;
+    padding-top:30px;
+    font-weight: 900;
+    font-size: 30px;
+    font-family: sans-serif;
+}
+.horizontal-list li
+{
+    display:inline-block;
+    margin:0px 12px 0px 12px;
+}
+.horizontal-list li a
+{
+    color:white;
+    text-decoration:none;
+    transition:color 0.2s;
+}
+.horizontal-list li a:hover
+{
+    color:orangered;
+}
+.text-center
+{
+    text-align: center;
+}
+#name-social-container
+{
+    margin-top:15vh;
+}
+#my-name
+{
+    font-size:5rem;
+    letter-spacing: 0.6rem;
+    color:white;
+    font-weight:900;
+    margin-bottom:0.5rem;
+}
+#social-icons li a img
+{
+    height:50px;
+    width:50px;
+    margin:0px 15px 0px 15px;
+    border-radius: 50px;
     
 }
