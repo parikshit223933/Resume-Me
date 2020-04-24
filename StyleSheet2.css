@@ -101,12 +101,53 @@ section
     height:75vh;
     display:flex;
     flex-direction: column;
+    align-items:center;/* works along cross axis */
 }
 section:nth-child(2n)
 {
-    background-color:lightgray;
+    background-color:rgb(224, 224, 224);
 }
 section:nth-child(2n+1)
 {
     background-color: white;
+}
+.section-heading
+{
+    width:auto;
+    padding:20px 10px 10px;
+    font-weight: 400;
+}
+.section-heading span
+{
+    font-size: 40px;
+    color:red;
+    display:inline-block;
+}
+.section-heading span img
+{
+    width:40px;
+    height:40px;/* to adjust skills image size */
+}
+#skill-heading
+{
+    position:relative;
+    bottom:0.3rem;
+}
+.mb75px
+{
+    margin-bottom:75px;
+}
+.skills-display
+{
+    width:70%;
+    height:100px;
+    /* border:2px solid black;
+    display:flex; */
+    flex-wrap:wrap;   
+}
+.skill-progress
+{
+    width:20px;
+    height:20px;
+    color:;
 }
