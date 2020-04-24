@@ -239,4 +239,10 @@ section:nth-child(2n+1)
     width:40%;
     min-height:150px;
     left:5%;
+    border:2px solid black;
+    margin:5px;
+}
+.timeline-box:nth-child(2n)
+{
+    left:53%;
 }
