@@ -227,6 +227,21 @@ section:nth-child(2n+1)
     padding-top:10px;
 }
 /* timeline */
+.timeline-divider
+{
+    position:absolute;
+    height:75%;
+    width:0%;
+    border:3px dashed #0096fa6b;
+    top:10%;
+    left:50%;
+}
+.timeline-traveller
+{
+    position:sticky;
+    top:20%;
+    transform:rotate(90deg);
+}
 .timeline
 {
     position: relative;
@@ -239,10 +254,73 @@ section:nth-child(2n+1)
     width:40%;
     min-height:150px;
     left:5%;
-    border:2px solid black;
+    background-color: rgb(224, 224, 224);
     margin:5px;
+    display:flex;
+    flex-direction: column;
+}
+.timeline-box:nth-child(n)
+{
+    align-items: flex-end;
 }
 .timeline-box:nth-child(2n)
 {
-    left:53%;
+    left:54%;
+}
+.timeline-box-headings span
+{
+    display:flex;
+    flex-direction:column;
+}
+.timeline-box-headings span img
+{
+    height:50px;
+    width:50px;
+    margin:10px;
+}
+.timeline-box-title
+{
+    color:#0000a9;
+    font-weight: 900;
+    font-size:20px;
+    font-family: sans-serif;
+}
+.timeline-box:nth-child(n) .timeline-box-headings span:nth-child(2)
+{
+    position:relative;
+    align-items:flex-end;
+    flex-wrap: wrap;
+}
+.timeline-box:nth-child(2n) .timeline-box-headings span:nth-child(2)
+{
+    position:relative;
+    align-items:flex-start;
+}
+.timeline-box-company-name
+{
+    color:orange;
+    font-size: large;
+    font-family:comic sans ms;
+    font-weight:bold;
+}
+.timeline-box-duration
+{
+    color:darkslategrey;
+}
+.timeline-box-headings
+{
+    /* margin: 6px auto 3px; */
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    margin:20px;
+    width:90%;
+    flex-wrap: wrap;
+}
+.timeline-box-description
+{
+    margin:20px;
+    width:80%;
+    text-align: justify;
+    justify-content: center;
 }
