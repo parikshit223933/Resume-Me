@@ -5,7 +5,7 @@ body
 #body-header
 {
     background-image: url("media/cover3.jpg");
-    height:65vh;
+    height:75vh;
     background-size:cover;
     background-position:top;
     background-attachment: fixed;
@@ -15,7 +15,7 @@ body
     list-style:none;
     padding-left:0px;
     margin:0px;
-    padding-top:30px;
+    padding-top:10px;
     font-weight: 900;
     font-size: 30px;
     font-family: sans-serif;
@@ -253,12 +253,14 @@ section:nth-child(2n+1)
     width:40%;
     min-height:150px;
     left:5%;
-    background-color: rgb(243, 243, 243);
+    background-color: rgb(245, 245, 245);
     margin:5px;
     display:flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    overflow-wrap: break-word;
 }
-.timeline-box:nth-child(n)
+.timeline-box:nth-child(2n+1)
 {
     align-items: flex-end;
 }
@@ -284,11 +286,20 @@ section:nth-child(2n+1)
     font-size:20px;
     font-family: sans-serif;
 }
-.timeline-box:nth-child(n) .timeline-box-headings span:nth-child(2)
+.timeline-box-title:nth-child(2n+1)
+{
+    text-align: right;
+}
+.timeline-box-title:nth-child(2n)
+{
+    text-align: left;
+}
+.timeline-box:nth-child(2n+1) .timeline-box-headings span:nth-child(2)
 {
     position:relative;
     align-items:flex-end;
     flex-wrap: wrap;
+    margin: 13px;
 }
 .timeline-box:nth-child(2n) .timeline-box-headings span:nth-child(2)
 {
@@ -318,7 +329,7 @@ section:nth-child(2n+1)
 }
 .timeline-box-description
 {
-    margin:20px;
+    margin:auto auto 20px;
     width:80%;
     text-align: justify;
     justify-content: center;
