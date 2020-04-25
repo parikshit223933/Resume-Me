@@ -232,7 +232,7 @@ section:nth-child(2n+1)
     position:absolute;
     height:75%;
     width:0%;
-    border:3px dashed #0096fa6b;
+    border:1px dashed #784eff;
     top:10%;
     left:50%;
 }
@@ -246,7 +246,6 @@ section:nth-child(2n+1)
 {
     position: relative;
     width: 75%;
-    border:2px solid black;
 }
 .timeline-box
 {
@@ -254,7 +253,7 @@ section:nth-child(2n+1)
     width:40%;
     min-height:150px;
     left:5%;
-    background-color: rgb(224, 224, 224);
+    background-color: rgb(243, 243, 243);
     margin:5px;
     display:flex;
     flex-direction: column;
