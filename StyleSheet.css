@@ -102,6 +102,7 @@ section
     display:flex;
     flex-direction: column;
     align-items:center;/* works along cross axis */
+    padding:20px;
 }
 section:nth-child(2n)
 {
@@ -230,10 +231,10 @@ section:nth-child(2n+1)
 .timeline-divider
 {
     position:absolute;
-    height:75%;
+    height:90%;
     width:0%;
     border:1px dashed #784eff;
-    top:10%;
+    top:5%;
     left:50%;
 }
 .timeline-traveller
@@ -251,23 +252,24 @@ section:nth-child(2n+1)
 .timeline-box
 {
     position:relative;
-    width:40%;
+    width:46%;
     min-height:150px;
-    left:5%;
     background-color: rgb(245, 245, 245);
     margin:5px;
+    left:-5%;
     display:flex;
     flex-direction: column;
     flex-wrap: wrap;
     overflow-wrap: break-word;
+    min-width: 300px;
 }
 .timeline-box:nth-child(2n+1)::after
 {
     content:'';
     border-radius:50%;
     position:absolute;
-    top:30%;
-    right:-12.5%;
+    top:50%;
+    right:-19.5%;
     width:0.5rem;
     height:0.5rem;
     background-color:red;
@@ -278,8 +280,8 @@ section:nth-child(2n+1)
     content:'';
     border-radius:50%;
     position:absolute;
-    top:30%;
-    left:-12.5%;
+    top:50%;
+    left:-19.5%;
     width:0.5rem;
     height:0.5rem;
     background-color:red;
@@ -291,12 +293,19 @@ section:nth-child(2n+1)
 }
 .timeline-box:nth-child(2n)
 {
-    left:54%;
+    left:58%;
 }
-.timeline-box-headings span
+.timeline-box:nth-child(2n+1) .timeline-box-headings span:nth-child(2)
 {
     display:flex;
     flex-direction:column;
+    align-items:flex-end;
+}
+.timeline-box:nth-child(2n) .timeline-box-headings span:nth-child(2)
+{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
 }
 .timeline-box-headings span img
 {
@@ -310,16 +319,22 @@ section:nth-child(2n+1)
     font-weight: 900;
     font-size:20px;
     font-family: sans-serif;
+    width:max-content;
+}
+.timeline-box-headings
+{
+    display:flex;
+    flex-direction: row;
 }
 .timeline-box-title:nth-child(2n+1)
 {
-    text-align: right;
+    text-align: left;
 }
 .timeline-box-title:nth-child(2n)
 {
-    text-align: left;
+    text-align: right;
 }
-.timeline-box:nth-child(2n+1) .timeline-box-headings span:nth-child(2)
+/* .timeline-box:nth-child(2n+1) .timeline-box-headings span:nth-child(2)
 {
     position:relative;
     align-items:flex-end;
@@ -330,7 +345,7 @@ section:nth-child(2n+1)
 {
     position:relative;
     align-items:flex-start;
-}
+} */
 .timeline-box-company-name
 {
     color:orange;
@@ -344,13 +359,7 @@ section:nth-child(2n+1)
 }
 .timeline-box-headings
 {
-    /* margin: 6px auto 3px; */
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
     margin:20px;
-    width:90%;
-    flex-wrap: wrap;
 }
 
 .timeline-box-description
