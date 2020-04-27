@@ -369,3 +369,25 @@ section:nth-child(2n+1)
     text-align: justify;
     justify-content: center;
 }
+
+
+
+/* portfolio */
+.portfolio-display
+{
+    width:70%;
+    height:inherit;
+    /* height:100px;
+    border:2px solid black; */
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    align-items: center;
+    padding-bottom:40px;
+}
+.project
+{
+    width:150px;
+    height:150px;
+    border:2px solid black;
+}
