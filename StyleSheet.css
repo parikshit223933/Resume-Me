@@ -241,6 +241,7 @@ section:nth-child(2n+1)
     position:sticky;
     top:20%;
     transform:rotate(90deg);
+    z-index:2;
 }
 .timeline
 {
@@ -259,6 +260,30 @@ section:nth-child(2n+1)
     flex-direction: column;
     flex-wrap: wrap;
     overflow-wrap: break-word;
+}
+.timeline-box:nth-child(2n+1)::after
+{
+    content:'';
+    border-radius:50%;
+    position:absolute;
+    top:30%;
+    right:-12.5%;
+    width:0.5rem;
+    height:0.5rem;
+    background-color:red;
+    z-index: 1;
+}
+.timeline-box:nth-child(2n)::after
+{
+    content:'';
+    border-radius:50%;
+    position:absolute;
+    top:30%;
+    left:-12.5%;
+    width:0.5rem;
+    height:0.5rem;
+    background-color:red;
+    z-index:1;
 }
 .timeline-box:nth-child(2n+1)
 {
