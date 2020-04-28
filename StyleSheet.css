@@ -577,3 +577,32 @@ section:nth-child(2n+1) {
     margin-left: 20px;
     font-family: sans-serif;
 }
+
+@media screen and (max-width:900px) {
+    .contact-content {
+        width: 90%;
+        flex-direction: column;
+    }
+    .contact-block {
+        width: 70%;
+    }
+    .contact-block:nth-child(2) div h1 {
+        text-align: center;
+    }
+    #contact-form div {
+        width: 100%;
+    }
+    .contact-block div span img {
+        display: block;
+        margin: 20px auto;
+    }
+    .contact-block div p {
+        margin: 0px;
+    }
+    #my-info span:nth-child(2) {
+        margin: 0px;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+}
