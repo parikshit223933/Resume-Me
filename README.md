@@ -1,2 +1,2 @@
 # Resume
-(In Progress)
+This is my resume.
