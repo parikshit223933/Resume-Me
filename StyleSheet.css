@@ -18,12 +18,14 @@ body {
 	padding-top: 10px;
 	font-weight: 900;
 	font-size: 30px;
-	font-family: sans-serif;
+    font-family: sans-serif;
 }
 
 .horizontal-list li {
 	display: inline-block;
-	margin: 0px 12px 0px 12px;
+    margin: 0px 12px 0px 12px;
+    cursor:pointer;
+    
 }
 
 .horizontal-list li a {
