@@ -8,7 +8,6 @@ function add_listener_to_the_element(itr, amount_of_scroll)
         var id = setInterval(function ()
         {
             window.scrollBy(0, amount_of_scroll);/* here the second entry is the amount by which i want to scroll */
-            console.log(window.pageYOffset, position_of_element_from_top);
             if (window.pageYOffset >= position_of_element_from_top) {
                 clearInterval(id);
                 return;
