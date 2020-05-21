@@ -41,13 +41,13 @@ for (let itr of list) {
     }
 }
 
-
-
-
-var skills_y_coordinate = document.getElementById('about').getBoundingClientRect().y;
-let id_global=setInterval(function ()
+/* instead of using setinterval i could also have used addeventlistener('scroll', checkscroll)
+ and if the skills section is once visible i can keep a boolean variable to removeeventlistener once the animation is performed
+or say, If the skills section is visible once on the screen. */
+/* let id_global = setInterval(function ()
 {
-    if (window.pageYOffset >= skills_y_coordinate) {
+    let height_of_skills_section = document.getElementById('skills').getBoundingClientRect().y;
+    if (height_of_skills_section < window.innerHeight) {
         clearInterval(id_global);
         let list_of_bars = document.querySelectorAll('.skill-progress>div');
         for (let bar of list_of_bars) {
@@ -62,4 +62,63 @@ let id_global=setInterval(function ()
             }, 15)
         }
     }
-}, 10)
+}, 10) */
+
+
+var list_of_bars = document.querySelectorAll('.skill-progress>div');
+function set_width_to_zero()
+{
+    for (let bar of list_of_bars) {
+        bar.style.width = "0";
+    }
+}
+function in_view(bar)
+{
+    let element_distance = bar.getBoundingClientRect().top;
+    if (element_distance < window.innerHeight) {
+        return true;
+    }
+    return false;
+}
+function fill_bar(bar, percentage)
+{
+    let count = 0;
+    let id = setInterval(function ()
+    {
+        bar.style.width = count.toString() + "%";
+        if (count++ == percentage) {
+            clearInterval(id);
+        }
+    }, 10)
+}
+function is_filled(bar)
+{
+    if (parseInt(bar.style.width) != 0) {
+        return true;
+    }
+    return false;
+}
+function checker_in_view()
+{
+    for (let bar of list_of_bars) {
+        if (in_view(bar) && !is_filled(bar)) {
+            fill_bar(bar, bar.getAttribute("data-skill-percent"));
+        }
+    }
+}
+function again_on_top()
+{
+    let skills = document.getElementById('skills')
+    let skills_distance = skills.getBoundingClientRect().top;
+    if (skills_distance > window.innerHeight) {
+        set_width_to_zero();
+    }
+}
+function listener()
+{
+    checker_in_view();
+    again_on_top()
+}
+
+set_width_to_zero();
+window.addEventListener('scroll', listener);
