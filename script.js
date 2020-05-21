@@ -3,7 +3,7 @@ function add_listener_to_the_element(itr, amount_of_scroll)
 {
     itr.addEventListener('click', function (event)
     {
-        event.preventDefault();
+        event.preventDefault();/* to prevent the default behaviour, i.e. sudden scrolling by default */
         let position_of_element_from_top = document.getElementById(itr.innerText.toLowerCase()).getBoundingClientRect().y;
         var id = setInterval(function ()
         {
