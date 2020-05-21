@@ -1,4 +1,5 @@
 "use strict";
+/* code for smooth scroll */
 function add_listener_to_the_element(itr, amount_of_scroll)
 {
     itr.addEventListener('click', function (event)
@@ -39,3 +40,26 @@ for (let itr of list) {
         add_listener_to_the_element(itr, 40);
     }
 }
+
+
+
+
+var skills_y_coordinate = document.getElementById('about').getBoundingClientRect().y;
+let id_global=setInterval(function ()
+{
+    if (window.pageYOffset >= skills_y_coordinate) {
+        clearInterval(id_global);
+        let list_of_bars = document.querySelectorAll('.skill-progress>div');
+        for (let bar of list_of_bars) {
+            let count = 0;
+            let id = setInterval(function ()
+            {
+                bar.style.width = (count++).toString() + "%";
+                if (count > parseInt(bar.dataset.skillPercent)) {
+                    clearInterval(id);
+                    return;
+                }
+            }, 15)
+        }
+    }
+}, 10)

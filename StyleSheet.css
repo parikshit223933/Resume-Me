@@ -234,9 +234,14 @@ section:nth-child(2n + 1) {
 	border-radius: 0.8rem;
 	box-shadow: 0px 0px 12px 1px black;
 	margin: 30px;
+	position:relative;
 }
 /* percentage-classes */
-
+.skill-progress span
+{
+	position:absolute;
+	/* in the javascript file, when the width of the inner div increases, then the text inside it should not wrap. thats why the position in abolute. and this position is absolute relative to the skill progress, whose position is relative */
+}
 .eighty-five-percent {
 	width: 85%;
 	height: inherit;
