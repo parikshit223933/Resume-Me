@@ -62,7 +62,7 @@ or say, If the skills section is visible once on the screen. */
             }, 15)
         }
     }
-}, 10) */
+}, 10)*/
 
 
 var list_of_bars = document.querySelectorAll('.skill-progress>div');
