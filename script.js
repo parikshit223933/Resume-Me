@@ -41,30 +41,6 @@ for (let itr of list) {
     }
 }
 
-/* instead of using setinterval i could also have used addeventlistener('scroll', checkscroll)
- and if the skills section is once visible i can keep a boolean variable to removeeventlistener once the animation is performed
-or say, If the skills section is visible once on the screen. */
-/* let id_global = setInterval(function ()
-{
-    let height_of_skills_section = document.getElementById('skills').getBoundingClientRect().y;
-    if (height_of_skills_section < window.innerHeight) {
-        clearInterval(id_global);
-        let list_of_bars = document.querySelectorAll('.skill-progress>div');
-        for (let bar of list_of_bars) {
-            let count = 0;
-            let id = setInterval(function ()
-            {
-                bar.style.width = (count++).toString() + "%";
-                if (count > parseInt(bar.dataset.skillPercent)) {
-                    clearInterval(id);
-                    return;
-                }
-            }, 15)
-        }
-    }
-}, 10)*/
-
-
 var list_of_bars = document.querySelectorAll('.skill-progress>div');
 function set_width_to_zero()
 {
@@ -122,3 +98,26 @@ function listener()
 
 set_width_to_zero();
 window.addEventListener('scroll', listener);
+/* instead of using setinterval i could also have used addeventlistener('scroll', checkscroll)
+ and if the skills section is once visible i can keep a boolean variable to removeeventlistener once the animation is performed
+or say, If the skills section is visible once on the screen. */
+/* let id_global = setInterval(function ()
+{
+    let height_of_skills_section = document.getElementById('skills').getBoundingClientRect().y;
+    if (height_of_skills_section < window.innerHeight) {
+        clearInterval(id_global);
+        let list_of_bars = document.querySelectorAll('.skill-progress>div');
+        for (let bar of list_of_bars) {
+            let count = 0;
+            let id = setInterval(function ()
+            {
+                bar.style.width = (count++).toString() + "%";
+                if (count > parseInt(bar.dataset.skillPercent)) {
+                    clearInterval(id);
+                    return;
+                }
+            }, 15)
+        }
+    }
+}, 10)*/
+
