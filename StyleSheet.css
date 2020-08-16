@@ -1,5 +1,6 @@
 body {
 	margin: 0px;
+	font-family: 'Roboto', sans-serif;
 }
 /* to remove all the resedual margins */
 
@@ -18,14 +19,13 @@ body {
 	padding-top: 10px;
 	font-weight: 900;
 	font-size: 30px;
-    font-family: sans-serif;
+	font-family: sans-serif;
 }
 
 .horizontal-list li {
 	display: inline-block;
-    margin: 0px 12px 0px 12px;
-    cursor:pointer;
-    
+	margin: 0px 12px 0px 12px;
+	cursor: pointer;
 }
 
 .horizontal-list li a {
@@ -234,12 +234,11 @@ section:nth-child(2n + 1) {
 	border-radius: 0.8rem;
 	box-shadow: 0px 0px 12px 1px black;
 	margin: 30px;
-	position:relative;
+	position: relative;
 }
 /* percentage-classes */
-.skill-progress span
-{
-	position:absolute;
+.skill-progress span {
+	position: absolute;
 	/* in the javascript file, when the width of the inner div increases, then the text inside it should not wrap. thats why the position in abolute. and this position is absolute relative to the skill progress, whose position is relative */
 }
 .eighty-five-percent {
@@ -477,7 +476,7 @@ section:nth-child(2n + 1) {
 /* portfolio */
 
 .portfolio-display {
-	width: 70%;
+	width: 100%;
 	height: inherit;
 	/* height:100px;
     border:2px solid black; */
@@ -488,25 +487,42 @@ section:nth-child(2n + 1) {
 }
 
 .project {
-	width: 200px;
-	height: 200px;
-	/* border:2px solid black; */
-	margin: 3% 5%;
+	width: 400px;
+	margin: 5px;
+	padding-right:15px;
+	padding-bottom:10px;
+	border-radius: 5px;
+	line-height: 30px;
 }
 
-.project a img {
-	position: relative;
-	width: 100%;
-    height: 100%;
-    transform:scale(1);
-	transition: all 0.1s;
+.project:nth-child(1)>ul>li>ol>li>a
+{
+	text-decoration:none;
+	color:blueviolet;
+}
+.project:nth-child(2)>ul>li>ol>li>a
+{
+	text-decoration:none;
+	color:red;
+}
+.project:nth-child(3)>ul>li>ol>li>a
+{
+	text-decoration:none;
+	color:green;
 }
 
-.project a img:hover {
-    transform: scale(1.3);
-	/* width: 120%;
-	height: 120%; */
-	justify-items: center;
+
+.project:nth-child(1)
+{
+	background-color:rgba(98, 0, 255, 0.1)
+}
+.project:nth-child(2)
+{
+	background-color:rgba(255, 0, 0, 0.1)
+}
+.project:nth-child(3)
+{
+	background-color:rgba(0, 128, 21, 0.1)
 }
 /* contact section */
 
